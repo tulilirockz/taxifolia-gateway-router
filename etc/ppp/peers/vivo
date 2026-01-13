@@ -1,0 +1,10 @@
+plugin pppoe.so
+
+enp5s0
+
+name "cliente@cliente"
+usepeerdns
+persist
+defaultroute
+hide-password
+noauth

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone target="ACCEPT">
+  <short>Home</short>
+  <description>For use in home areas. You mostly trust the other computers on networks to not harm your computer. Only selected incoming connections are accepted.</description>
+  <service name="ssh"/>
+  <service name="dhcpv6-client"/>
+  <service name="cockpit"/>
+  <service name="unbound"/>
+  <service name="searxng"/>
+  <service name="syncthing"/>
+  <service name="qbittorrent"/>
+  <service name="dhcp"/>
+  <service name="dns"/>
+  <service name="navidrome"/>
+  <service name="radicale"/>
+  <service name="miniflux"/>
+  <masquerade/>
+  <forward-port port="53" protocol="udp" to-port="5335"/>
+  <forward-port port="53" protocol="tcp" to-port="5335"/>
+  <rule>
+    <tcp-mss-clamp/>
+  </rule>
+  <interface name="enp3s0"/>
+  <interface name="enp6s0"/>
+  <interface name="podman0"/>
+  <interface name="veth0"/>
+  <forward/>
+</zone>

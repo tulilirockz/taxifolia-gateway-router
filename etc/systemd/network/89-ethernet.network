@@ -1,0 +1,7 @@
+# Ignore CentOS Stream default Ethernet configuration
+[Match]
+Kind=!*
+Type=ether
+
+[Link]
+RequiredForOnline=no

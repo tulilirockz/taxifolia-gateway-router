@@ -1,0 +1,28 @@
+[Unit]
+Description=PPP connection for %I
+Documentation=man:pppd(8)
+
+[Service]
+Type=forking
+ExecStart=/usr/sbin/pppd call vivo linkname %i updetach
+ExecStop=/bin/kill $MAINPID
+ExecReload=/bin/kill -HUP $MAINPID
+StandardOutput=null
+Restart=always
+RestartSec=30
+PrivateTmp=yes
+ProtectHome=yes
+ProtectSystem=strict
+ReadWritePaths=/run/
+ProtectKernelTunables=yes
+ProtectControlGroups=yes
+SystemCallFilter=@system-service
+SystemCallArchitectures=native
+LockPersonality=yes
+MemoryDenyWriteExecute=yes
+RestrictRealtime=yes
+
+[Install]
+WantedBy=sys-devices-virtual-net-%i.device
+WantedBy=multi-user.target
+WantedBy=network-online.target

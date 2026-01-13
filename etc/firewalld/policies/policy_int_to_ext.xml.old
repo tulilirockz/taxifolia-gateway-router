@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policy priority="100" target="ACCEPT">
+  <ingress-zone name="home"/>
+  <egress-zone name="public"/>
+</policy>

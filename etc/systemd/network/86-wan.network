@@ -1,0 +1,5 @@
+[Match]
+Type=ppp
+
+[Network]
+DHCP=yes
