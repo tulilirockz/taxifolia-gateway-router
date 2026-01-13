@@ -2,7 +2,7 @@
 
 Most of my configuration files for my Router based on [Taxifolia](https://github.com/tulilirockz/taxifolia)!
 
-This sets up a gateway router using [pppd], [systemd-networkd](https://www.freedesktop.org/software/systemd/man/latest/systemd.network.html) and firewalld, with [`unbound`](https://nlnetlabs.nl/projects/unbound/) from a [quadlet](https://docs.podman.io/en/latest/markdown/podman-systemd.unit.5.html) on [Marmorata](https://github.com/tulilirockz/marmorata) as the DNS resolver by redirecting ports using firewalld forwarding.
+This sets up a gateway router using [pppd](http://www.samba.org/ppp), [systemd-networkd](https://www.freedesktop.org/software/systemd/man/latest/systemd.network.html) and firewalld, with [`unbound`](https://nlnetlabs.nl/projects/unbound/) from a [quadlet](https://docs.podman.io/en/latest/markdown/podman-systemd.unit.5.html) on [Marmorata](https://github.com/tulilirockz/marmorata) as the DNS resolver by redirecting ports using firewalld forwarding.
 
 The complete deployment for this project is by using Taxifolia + Marmorata (for unbound) + this as a confext configuration.
 
