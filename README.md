@@ -24,3 +24,5 @@ just install
 ```
 
 The installation procedure is particularly simple so you can just run the command directly on your deployment instead.
+
+These were partially based on <https://eldon.me/arch-linux-based-home-router-part-iii-firewalld-configuration/>
